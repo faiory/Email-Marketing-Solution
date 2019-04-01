@@ -1,4 +1,4 @@
-@extends('admin_template')
+@extends('app.blade.php')
 
 @section('content')
     <div class='row'>

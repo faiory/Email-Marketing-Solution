@@ -1,7 +1,7 @@
-@extends('admin_template')
+@extends('layouts.mainTemplate')
 
 @section('contentHeader')
-Dashboard  
+Dashboard
 @stop
 
 @section('content')

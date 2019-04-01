@@ -18,7 +18,7 @@
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="bower_components/admin-lte/dist/img/avatar.png" class="user-image" alt="User Image">
-                        <span class="hidden-xs">Faisal</span>
+                        <span class="hidden-xs">{{ Auth::user()->email }}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- The user image in the menu -->

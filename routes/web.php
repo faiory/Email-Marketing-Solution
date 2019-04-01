@@ -10,34 +10,35 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('login', function () {
-//     return view('login');
-// });
 
 Route::get('login', array('uses' => 'HomeController@showLogin'));
 Route::post('login', array('uses' => 'HomeController@doLogin'));
 
 
-// Route::get('ID/{id}',function($id) {
-//     echo 'ID: '.$id;
-// });
 
-Route::get('/', 'HomeController@index');
+// TO ACCESS THIS ROUTE GROUP YOU HAVE TO BE AUTHENTICATED
+Route::middleware(['auth'])->group(function () {    
+    Route::get('/', 'HomeController@index')->name('/');
+    Route::get('users', 'UserController@index')->name('users');
+    // Route::get('users', 'UserController@index')->name('users');
+    
+    Route::post('users', 'UserController@store');
+    
+    // Route::post('users', array('uses' => 'UserController@store'));
 
-Route::get('admin', function () {
-    return view('admin_template');
-})->name("admin");
+    
+    Route::get('clients', function () {
+        return view('clients');
+    })->name("clients");
+});
 
-Route::get('dashboard', function () {
-    return view('dashboard');
-})->name("dashboard");
+Route::get('createNew', 'UserController@createNew')->name('createNew');
 
-Route::get('users', function () {
-    return view('users');
-})->name("users");
-
-Route::get('test', 'TestController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('test', 'TestController@index');
+
+// Route::get('ID/{id}',function($id) {
+//     echo 'ID: '.$id;
+// });
