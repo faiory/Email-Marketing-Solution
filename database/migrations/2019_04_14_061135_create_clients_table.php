@@ -18,6 +18,7 @@ class CreateClientsTable extends Migration
             $table->string('email', 30);
             $table->integer('status_id');
             $table->integer('subgroup_id');
+            $table->string('sub_token');
             $table->timestamps();
         });
     }

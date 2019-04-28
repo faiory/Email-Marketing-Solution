@@ -90,7 +90,7 @@
             <img src="https://cdn.rawgit.com/ahmedhosna95/upload/1731955f/sad404.svg" alt="404"> 
             {{-- TODO CHANGE TO CLIENT
             AND NOT USER --}}
-            <span>Oh no! we're sorry to see you leave {{ $user->email }} </span>
+            <span>Oh no! we're sorry to see you leave {{ $client }} </span>
             <p class="p-a">If you have any complaint, you can email us here</p>
             {{-- <a href='#' class="back">lets go back</a> --}}
 

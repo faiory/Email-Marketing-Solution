@@ -43,8 +43,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('unsubscribe ', function () {
         return view('unsubscribe');
     })->name("unsubscribe");
-    
-    Route::get('unsubscribe/{id}', 'SubscriptionController@unsubscribe');
 
 
 
@@ -53,6 +51,7 @@ Route::middleware(['auth'])->group(function () {
     })->name("test");
 
 });
+Route::get('unsubscribe/{id}', 'SubscriptionController@unsubscribe');
 
 Route::get('createNew', 'UserController@createNew')->name('createNew');
 

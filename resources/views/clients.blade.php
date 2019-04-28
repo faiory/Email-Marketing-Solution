@@ -124,15 +124,10 @@
         window.location = 'clients/' + clientId + "/" + clientEmail;
     });
     $(".deleteBtn").click(function (){
-        var userId = $(this).closest( "tr" ).attr('id');
+        var clientId = $(this).closest( "tr" ).attr('id');
         if (confirm('Are you sure you want to delete client with id ' + clientId)) {
             window.location = 'clients/delete/' + clientId;
         }
     });
 </script>
-
-
-
-
-
 @stop

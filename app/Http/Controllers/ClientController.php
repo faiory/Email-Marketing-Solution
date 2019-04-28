@@ -18,9 +18,22 @@ class ClientController extends Controller
         return view('clients', ['clients' => $clients, 'statuses' => $statuses]);
     }
     
+    // GENREATE RANDOM CODE USED FOR SUBSCRIBING AND UNSUBSCRIBING
+    
+
     // CREATE NEW USER
     public function store(Request $request)
     {
+        function generateRandomString($length = 10) {
+            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $charactersLength = strlen($characters);
+            $randomString = '';
+            for ($i = 0; $i < $length; $i++) {
+                $randomString .= $characters[rand(0, $charactersLength - 1)];
+            }
+            return $randomString;
+        }
+
         // Validate the request...
         $validatedData = $request->validate([
             'email' => 'required|unique:clients|max:30',
@@ -57,32 +70,19 @@ class ClientController extends Controller
             $client->email = $request->email;
             $client->status_id = $request->status_id;
             $client->subgroup_id = $subgroupIdToBeUsed;
+            
+            // 
+            $token = generateRandomString();
+            while (Client::where('sub_token', $token)->first() != null) {
+                $token = generateRandomString();
+            }
+            $client->sub_token = $token;
+            // 
+
+            
             $client->save();
+            
             return redirect('clients');
-
-
-            // foreach ($subgroups as $subgroup) {   
-            //     if ($subgroup) 
-            //     // CHECK IF THE SUBGROUP IS FULL OR NOT
-            //     if (Client::where('subgroup_id', $subgroup->id)->count() < 2) {
-            //         $client->subgroup_id = $subgroup->id;
-            //         $client->save();
-                    
-            //         // return redirect('clients');
-            //         return "should not create new subgroup";
-            //     } else {
-            //         // dd(Client::where('subgroup_id', $subgroup->id)->count());
-            //         $newSub = new Subgroup();
-            //         $newID = $subgroup->id + 1;
-            //         $newSub->name = "subgroup {$newID}";
-                    
-            //         $newSub->save();
-            //         $client->subgroup_id = $newID;
-            //         $client->save();
-            //         // return redirect('clients');
-            //         return "should create a new subgroup";
-            //     }
-            // }
         }
     }
 
@@ -91,16 +91,6 @@ class ClientController extends Controller
     public function delete($id)
     {
         Client::destroy($id);
+        return redirect('clients');
     }
-    
-
-
-    // For populating
-    // public function createNew(){
-    //     $user = new User();
-    //     $user->password = Hash::make('123123');
-    //     $user->email = 'abbas@gmail.com';
-    //     $user->role_id = 1;
-    //     $user->save();        
-    // }
 }

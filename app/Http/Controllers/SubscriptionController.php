@@ -6,24 +6,23 @@ use Illuminate\Http\Request;
 
 // TODO
 // THIS WILL BE CHANGED TO CLIENT
-use App\User;
+use App\Client;
 
 class SubscriptionController extends Controller
 {
     //
     //CREATE NEW USER
-    public function unsubscribe($id)
+    public function unsubscribe($token)
     {
-        // $user = new User();
-        $user = User::find($id);
-        // $email = User::find($id)->email;
-        
-        if (User::where('id', $id)->exists()){
-            return view('unsubscribe', ['user' => $user]);
+        if (Client::where('sub_token', $token)->exists()){
+            $client = Client::where('sub_token', $token)->first();
+
+            return view('unsubscribe', ['client' => $client->email]);
         } else {
-            
             // WHEN NOT FOUND SHOW A 404 ERROR CODE PAGE
-            return "User not found";
+            // return "Not found";
+            return abort(404);
+
         }
         
     }

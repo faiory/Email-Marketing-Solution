@@ -1,9 +1,6 @@
 @extends('layouts.mainTemplate') 
 @section('contentHeader') Dashboard
 <script src="bower_components/chart.js/Chart.js"></script>
-
-
-
 @stop 
 @section('content')
 <div class="row">
@@ -58,7 +55,6 @@
 <script>
     var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
     var pieChart = new Chart(pieChartCanvas)
-    // var subs = {{ $usersCount }}
     var PieData = [
     {
         value    : {{ $subscriptionsCount }} ,
@@ -67,7 +63,7 @@
         label    : 'Subscribes'
     },
     {
-        value    : {{$unsubscriptionsCount}},
+        value    : {{ $unsubscriptionsCount }},
         color    : '#00a65a',
         highlight: '#00a65a',
         label    : 'Unsubscribes'
