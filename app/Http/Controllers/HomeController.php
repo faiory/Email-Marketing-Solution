@@ -28,23 +28,16 @@ class HomeController extends Controller
      */
     public function index()
     {   
-        $clientsCount = Client::count();
-        $unsubscriptionsCount = Client::where('status_id', Status::where('name', 'Unsubscribed')->first()->id)->count();
-        $subscriptionsCount = $clientsCount - $unsubscriptionsCount;
-        $usersCount = User::count();
-
-        $newsletterCount = Newsletter::count();
-        return view('dashboard', ['unsubscriptionsCount' => $unsubscriptionsCount, 'clientsCount' => $clientsCount, 'subscriptionsCount' => $subscriptionsCount, 'newsletterCount' => $newsletterCount, 'usersCount' => $usersCount]);
+        return view('dashboard');
     }
 
     public function showLogin()
-{
-    // show the form
-    return View::make('login');
-}
-
-public function doLogin()
-{
-// process the form
-}
+    {
+        // show the form
+        return View::make('login');
+    }
+    public function doLogin()
+    {
+        // process the form
+    }
 }

@@ -3,21 +3,32 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Mail Marketing</title>
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous">
+  crossorigin="anonymous">
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="bower_components/admin-lte/dist/css/adminlte.min.css">
 <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
-<link rel="stylesheet" href="bower_components/admin-lte/dist/css/adminlte.min.css">
-<link rel="stylesheet" href="bower_components/admin-lte/dist/css/skins/skin-blue.min.css"> {{-- MDL --}}
 
-<!-- -->
+<link rel="stylesheet" href="bower_components/admin-lte/dist/css/skins/skin-blue.min.css">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-red.min.css" />
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-<script src="bower_components/jQuery/dist/jquery.min.js"></script>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/admin-lte/dist/js/adminlte.js"></script>
+
+<script type="text/javascript" src="/bower_components/moment/min/moment.min.js"></script>
+{{-- <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script> --}}
+<script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+{{-- <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" /> --}}
+<link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+
+
+
 <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>

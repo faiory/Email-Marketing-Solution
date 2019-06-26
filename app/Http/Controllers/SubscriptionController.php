@@ -3,9 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-// TODO
-// THIS WILL BE CHANGED TO CLIENT
 use App\Client;
 
 class SubscriptionController extends Controller
@@ -16,13 +13,21 @@ class SubscriptionController extends Controller
     {
         if (Client::where('sub_token', $token)->exists()){
             $client = Client::where('sub_token', $token)->first();
-
-            return view('unsubscribe', ['client' => $client->email]);
+            if ($client->status_id == 1) {
+                $client->status_id = 2;
+                $client->save();
+            } else {
+                $client->status_id = 1;
+                $client->save();
+            }
+            if ($client->status_id == 1) {
+                \Mail::to($client)->send(new WelcomeClient($client));
+                return "<script>window.close();</script>";
+            } else {
+                return view('unsubscribe', ['client' => $client->email]);
+            }
         } else {
-            // WHEN NOT FOUND SHOW A 404 ERROR CODE PAGE
-            // return "Not found";
             return abort(404);
-
         }
         
     }

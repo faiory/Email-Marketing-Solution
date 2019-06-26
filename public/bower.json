@@ -1,0 +1,21 @@
+{
+  "name": "public",
+  "homepage": "https://github.com/faiory/Email-Marketing-Solution",
+  "authors": [
+    "Faisal <201500460@student.polytechnic.bh>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "resolutions": {
+    "jquery": "^3.2.1"
+  }
+}

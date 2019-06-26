@@ -31,11 +31,10 @@
     "documentation"
   ],
   "dependencies": {
-    "bootstrap-slider": "*",
     "chart.js": "1.0.*",
     "ckeditor": "^4.7.0",
     "bootstrap-colorpicker": "^2.5.1",
-    "bootstrap": "^3.4.0",
+    "bootstrap": "^3.3.7",
     "jquery": "^3.2.1",
     "datatables.net": "^1.10.15",
     "datatables.net-bs": "^2.1.1",
@@ -47,7 +46,7 @@
     "fullcalendar": "^3.4.0",
     "inputmask": "jquery.inputmask#^3.3.7",
     "ion.rangeSlider": "ionrangeslider#^2.2.0",
-    "jvectormap": "^1.2.2",
+    "jvectormap": "^2.0.4",
     "jquery-knob": "^1.2.13",
     "morris.js": "^0.5.1",
     "PACE": "pace#^1.0.2",
@@ -59,18 +58,15 @@
     "Ionicons": "ionicons#^2.0.1",
     "jquery-ui": "1.11.4"
   },
-  "resolutions": {
-    "jquery": "^3.2.1"
-  },
-  "version": "2.4.9",
-  "_release": "2.4.9",
+  "version": "2.4.3",
+  "_release": "2.4.3",
   "_resolution": {
     "type": "version",
-    "tag": "v2.4.9",
-    "commit": "f0edf90f88c9909aaf92de25679507c3fd379985"
+    "tag": "v2.4.3",
+    "commit": "200d426893dee75e0079a4a42af7182b93bd89d9"
   },
-  "_source": "https://github.com/almasaeed2010/AdminLTE.git",
-  "_target": "^2.4.9",
-  "_originalSource": "admin-lte",
+  "_source": "https://github.com/dwilkie/AdminLTE.git",
+  "_target": "^2.4.3",
+  "_originalSource": "admin-lte-3",
   "_direct": true
 }

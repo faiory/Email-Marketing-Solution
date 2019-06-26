@@ -62,15 +62,15 @@
   "resolutions": {
     "jquery": "^3.2.1"
   },
-  "version": "2.4.9",
-  "_release": "2.4.9",
+  "version": "2.4.10",
+  "_release": "2.4.10",
   "_resolution": {
     "type": "version",
-    "tag": "v2.4.9",
-    "commit": "f0edf90f88c9909aaf92de25679507c3fd379985"
+    "tag": "v2.4.10",
+    "commit": "4672183ea06a28d540a1d87900a7b5f84b1a1495"
   },
-  "_source": "https://github.com/almasaeed2010/AdminLTE.git",
-  "_target": "^2.4.9",
-  "_originalSource": "admin-lte",
+  "_source": "https://github.com/ColorlibHQ/AdminLTE.git",
+  "_target": "^2.4.10",
+  "_originalSource": "https://github.com/ColorlibHQ/AdminLTE.git",
   "_direct": true
 }
